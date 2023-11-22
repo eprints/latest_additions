@@ -1,0 +1,85 @@
+
+/* latest and latest tool */
+
+div.ep_latest_result {
+	margin-bottom: 0.5em;
+	margin-top: 0.5em;
+}
+
+div.ep_latest_tool_result {
+	margin-bottom: 0.5em;
+	margin-top: 0.5em;
+}
+
+/* This code will do the magic. */
+div.ep_latest_tool_list {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+/* This code is just to style the inner div elements. */
+div.ep_latest_tool_list > div.ep_latest_tool_result_test {
+  background-color: #white;
+  width: 350px;
+  margin: 10px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 20px;
+}
+
+div.ep_link_title a {
+      text-decoration: none;
+      color: #666666; /* Change to your preferred color */
+      font-family: "Helvetica", sans-serif;
+	display: block;
+  max-height: 3.0em; /* Three lines of text */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Truncate text with ellipsis */
+ }
+
+/* Optional: Add styles to make the ellipsis visible */
+div.ep_link_title a:hover {
+  white-space: normal; /* Allow text to wrap on hover */
+  max-height: none; /* Remove the height limit on hover */
+}
+
+div.dropdown {
+      position: relative;
+}
+
+div.dropdown span {
+      display: block;
+      text-align: left; /* Set text alignment to left */
+      padding: 8px;
+}
+
+div.dropdown-content {
+      display: none;
+      position: absolute;
+      left: 0; /* Align to the left */
+      width: 200px; 
+      background-color: #f9f9f9;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+}
+
+div.dropdown:hover .dropdown-content {
+      display: block;
+}
+
+
+div.dropdown-content-table table{
+      color: #333333; /* Change to your preferred color */
+      font-family: "Helvetica", sans-serif;
+        display: block;
+  max-height: 1.0em; /* Three lines of text */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Truncate text with ellipsis */
+ }
+
+/* Optional: Add styles to make the ellipsis visible */
+div.dropdown-content-table  table:hover {
+  white-space: normal; /* Allow text to wrap on hover */
+  max-height: none; /* Remove the height limit on hover */
+}
+
