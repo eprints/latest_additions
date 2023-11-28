@@ -1,4 +1,3 @@
-
 /* latest and latest tool */
 
 div.ep_latest_result {
@@ -33,14 +32,20 @@ div.ep_latest_tool_list > div.ep_latest_tool_result_test {
         text-overflow: ellipsis; 
 }
 
+.truncated::after {
+     content: '...';
+     display: inline-block;
+}
+
 div.ep_link_title a {
       text-decoration: none;
       color: #666666; /* Change to your preferred color */
       font-family: "Helvetica", sans-serif;
-	display: block;
-  overflow: hidden;
-  max-height: 3.0em; /* Three lines of text */
-  text-overflow: ellipsis; /* Truncate text with ellipsis */
+      overflow: hidden;
+      text-overflow: ellipsis; /* Truncate text with ellipsis */
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
  }
 
 div.dropdown-content {
@@ -77,8 +82,9 @@ div.dropdown-content-table  table:hover {
     .ep_link_title a {
 	font-size: 14px;
         width: 250px; /* Adjust maximum width for smaller screens */
-        display: block;
-	max-height: 4.0em;
+	display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
      }
    
     .dropdown-content-table table {
@@ -105,8 +111,9 @@ div.dropdown-content-table  table:hover {
      .ep_link_title a {
         font-size: 12px;
         width: 200px; /* Adjust maximum width for smaller screens */
-        display: block;
-        max-height: 4.0em;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
      }
    
      .dropdown-content-table table {
