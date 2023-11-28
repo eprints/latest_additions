@@ -81,6 +81,51 @@
 	display: table-row;
 }
 
+.ep_search_result_docs 
+{
+        width:300px;
+        height:180px;
+        overflow: hidden;
+        border: 1px solid #ccc;
+border-radius: 10px 10px 0 0;
+margin-bottom: 5px;
+}
+
+.ep_search_result_docs img 
+{
+        width:100%;
+        height:100%
+        object-fit: cover; 
+}
+
+@media (max-width: 768px) {
+    .ep_search_result_docs {
+        width:250px;
+        height:150px;
+        overflow: hidden;
+        border: 1px solid grey;
+        }
+
+    .ep_search_result_docs img {
+        object-fit: cover; /* Allow images to exceed their natural size if needed */
+    }
+}
+
+@media (max-width: 600px) {
+
+    .ep_search_result_docs {
+        /* Further adjust padding or font size for even smaller screens */
+        width:200px;
+        height:100px;
+        overflow: hidden;
+        border: 1px solid grey;
+        }
+
+    .ep_search_result_docs img {
+        object-fit: cover;
+    }
+}
+
 .ep_search_result > div
 {
 	padding: 4px 0.5em 4px 4px;
@@ -114,10 +159,3 @@ span.search_desc {
 }
 
 
-.ep_citation_details {
-        width: 320px;
-	height: 180px;
-        overflow: hidden; 
-        white-space: normal; /* Prevent text from wrapping */
-        text-overflow: ellipsis; 
-}
