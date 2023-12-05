@@ -11,21 +11,6 @@ div.ep_latest_tool_result {
 	margin-top: 0.5em;
 }
 
-/* This code will do the magic. */
-div.ep_latest_tool_list {
-  display: flex;
-  flex-flow: row wrap;
-}
-
-/* This code is just to style the inner div elements. */
-div.ep_latest_tool_list > div.ep_latest_tool_result_test {
-  background-color: #white;
-  margin: 2px;
-  text-align: center;
-  line-height: 20px;
-  font-size: 20px;
-}
-
 div.dropdown-content-table table{
       color: #333333; /* Change to your preferred color */
       font-family: "Helvetica", sans-serif;

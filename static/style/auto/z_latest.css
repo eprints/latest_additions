@@ -1,3 +1,4 @@
+
 /* latest and latest tool */
 
 div.ep_latest_result {
@@ -11,21 +12,14 @@ div.ep_latest_tool_result {
 }
 
 div.ep_latest_tool_list {
-  display: flex;
-  flex-flow: row wrap;
-}
-
-/* This code is just to style the inner div elements. */
-div.ep_latest_tool_list > div.ep_latest_tool_result_test {
-  background-color: #white;
-  margin: 2px;
-  text-align: center;
-  line-height: 20px;
-  font-size: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px, 1fr)); /* Default to 3 columns on larger screens */
+    gap: 8px; /* Adjust the gap as needed */
+    max-width: 100%;
 }
 
 .ep_citation_details {
-        width: 305px;
+	width: 300px;
         height: 80px;
         overflow: initial; 
         white-space: normal; /* Prevent text from wrapping */
@@ -74,10 +68,12 @@ div.dropdown-content-table  table:hover {
   max-height: none; /* Remove the height limit on hover */
 }
 
-@media (max-width: 768px) {
-    
-    .ep_search_result_test {
-       width: 255px;
+@media (max-width: 1288px) {
+    div.ep_latest_tool_list {
+    grid-template-columns: repeat(auto-fill,minmax(250px, 1fr)); /* Default to 3 columns on larger screens */
+    }
+    .ep_latest_tool_result_test {
+       width: 250px;/* Additional styles for smaller screens */
     }
     .ep_link_title a {
 	font-size: 14px;
@@ -102,12 +98,15 @@ div.dropdown-content-table  table:hover {
     }
 }
 
-@media (max-width: 600px) {
-   
-      .ep_search_result_test {
-        width: 205px;
-      }
-     
+@media (max-width: 1067px) {
+    div.ep_latest_tool_list {
+    grid-template-columns: repeat(auto-fill,minmax(200px, 1fr)); /* Default to 3 columns on larger screens */
+    }
+    /* Adjust individual items for even smaller screens if needed */
+    .ep_latest_tool_result_test {
+       width: 200px; /* Additional styles for even smaller screens */
+    }
+    
      .ep_link_title a {
         font-size: 12px;
         width: 200px; /* Adjust maximum width for smaller screens */
