@@ -1,95 +1,36 @@
-<cite:citation xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:epc="http://eprints.org/ep3/control" xmlns:cite="http://eprints.org/ep3/citation" >
-<!--<a href="{$item.uri()}"><epc:print expr="$item.uri()" /></a>-->
-<div class="ep_link_title">
-   <a style="text-align:left"  href="{$item.uri()}"><epc:print expr="title" opts="magicstop"/></a>
-</div>
-
-<!--<div class="dropdown-content-table">
-<table>
-  <epc:foreach expr="creators_name" iterator="name">
-      <tr><td style= "text-align: left"><div style="font-family:serif"><epc:print expr="$name{given}" /> <epc:print expr="$name{family}" /></div></td></tr>
-  </epc:foreach>
-</table>
-</div>-->
-
-
-<!--<div class="dropdown-content" style="display:block">
-  <div class="name-list">
-    <div class="name-item">
-      <div class="name-header">
-        <span class="firstname">
-          <epc:foreach expr="creators_name" iterator="name">
-            <epc:if expr="$name.index == 0">
-              <epc:print expr="$name{given}" /> <epc:print expr="$name{family}" />
-            </epc:if>
-          </epc:foreach>
-        </span>
-        <button class="expand-btn" onclick="expandNames()">Expand</button>
-      </div>
-      <div class="full-names" style="display: none;">
-        <table>
-          <epc:foreach expr="creators_name" iterator="name">
-            <tr>
-              <td style="text-align: left">
-                <div style="font-family: serif">
-                  <epc:print expr="$name{given}" /> <epc:print expr="$name{family}" />
-                </div>
-              </td>
-            </tr>
-          </epc:foreach>
-        </table>
-      </div>
-    </div>
-  </div>
-</div>-->
-
-
-<div class="dropdown-content">
-  <div class="name-list">
-    <div class="name-item">
-      <div class="name-header" style="text-align: left">
-         <epc:foreach expr="creators_name" iterator="name" limit="1">
-	 
-                  <epc:print expr="$name{given}" /> <epc:print expr="$name{family}" />
-                  <!--<button class="expand-btn" onclick="expandNames(this)">Expand</button>-->
-	<button class="expandbtn" onclick="expandNames(this)"><img id="expand-icon" src="{$config{rel_path}}/style/images/plus.png"/></button>
-	</epc:foreach>
-      </div>
-      <div class="full-names" style="display:none;">
-        <table>
-          <epc:foreach expr="creators_name" iterator="name">
-            <tr>
-              <td style="text-align: left">
-                <div>
-                  <epc:print expr="$name{given}" /> <epc:print expr="$name{family}" />
-                </div>
-              </td>
-            </tr>
-          </epc:foreach>
-        </table>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!--<div class="dropdown">
-<span>Author Names:</span>
-<div class="dropdown-content"><table class ="authorsTable"  style="border-collapse: collapse; width: 100%;">
-  <epc:foreach expr="creators_name" iterator="name">
-      <tr><td style= "text-align: left"><div style="font-family:serif"><epc:print expr="$name{given}" /> <epc:print expr="$name{family}" /></div></td></tr>
-  </epc:foreach>
-</table>
-</div>
-</div>-->
-
-<!--<div>
-<table>
-   <tr><td><span class="show-more toggle-btn" onclick="toggleNames()">Authors ▼ </span></td></tr>
-  <epc:foreach expr="creators_name" iterator="name">
-      <tr><td style= "text-align: left"><div style="font-family:serif"><epc:print expr="$name{given}" /> <epc:print expr="$name{family}" /></div></td></tr>
-  </epc:foreach>
-</table>
-</div>-->
-
-
-</cite:citation>
+<citation xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:epc="http://eprints.org/ep3/control" xmlns:cite="http://eprints.org/ep3/citation">
+	<div class="ep_link_title">
+		<a style="text-align:left" href="{$item.uri()}">
+			<print expr="title" opts="magicstop" />
+		</a>
+	</div>
+	<div class="dropdown-content">
+		<div class="name-list">
+			<div class="name-item">
+				<div class="name-header" style="text-align: left">
+					<foreach expr="creators_name" iterator="name" limit="1">
+						<print expr="$name{given}" />
+						<print expr="$name{family}" />
+						<button class="expandbtn" onclick="expandNames(this)">
+							<img id="expand-icon" src="{$config{rel_path}}/style/images/plus.png" />
+						</button>
+					</foreach>
+				</div>
+				<div class="full-names" style="display:none;">
+					<table>
+						<foreach expr="creators_name" iterator="name">
+							<tr>
+								<td style="text-align: left">
+									<div>
+										<print expr="$name{given}" />
+										<print expr="$name{family}" />
+									</div>
+								</td>
+							</tr>
+						</foreach>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</citation>
