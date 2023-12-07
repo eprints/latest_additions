@@ -1,81 +1,92 @@
 
 /* latest and latest tool */
 
+div.ep_latest_result {
+	margin-bottom: 0.5em;
+	margin-top: 0.5em;
+}
+
+div.ep_latest_tool_result {
+	margin-bottom: 0.5em;
+	margin-top: 0.5em;
+}
+
 div.ep_latest_tool_list {
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(250px, 1fr)); 
-    gap: 8px;
+    grid-template-columns: repeat(auto-fill,minmax(250px, 1fr)); /* Default to 3 columns on larger screens */
+    gap: 8px; /* Adjust the gap as needed */
     max-width: 100%;
 }
 
 .ep_citation_details {
 	width: 300px;
-    height: 80px;
-    overflow: initial; 
-    white-space: normal;
-    text-overflow: ellipsis; 
+        height: 80px;
+        overflow: initial; 
+        white-space: normal; /* Prevent text from wrapping */
+        text-overflow: ellipsis; 
 }
 
 .truncated::after {
-    content: '...';
-    display: inline-block;
+     content: '...';
+     display: inline-block;
 }
 
 div.ep_link_title a {
-    text-decoration: none;
-    color: #666666;
-    font-family: "Helvetica", sans-serif;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
+      text-decoration: none;
+      color: #666666; /* Change to your preferred color */
+      font-family: "Helvetica", sans-serif;
+      overflow: hidden;
+      text-overflow: ellipsis; /* Truncate text with ellipsis */
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
  }
 
 div.dropdown-content {
-    display: block;
-    position: relative;
-    z-index: 2;
+      display: block;
+      position: relative;
+      z-index: 2;
 }
 
 .full-names {
-    background-color: white;
-    padding-left: 5px;
-    border: 1px solid rgba(204, 204, 204, 0.8);
-    margin-top: -4px;
-    width: fit-content; 
-}
+background-color: white;
+padding-left: 5px;
+border: 1px solid rgba(204, 204, 204, 0.8);
+margin-top: -4px;
+width: fit-content; }
 
 div.dropdown-content-table table{
-    color: #333333; 
-    display: block; 
-    max-height: 1.4em; 
-    text-overflow: ellipsis;
-}
+      color: #333333; /* Change to your preferred color */
+ display: block; 
+ max-height: 1.4em; /* Three lines of text */
+  text-overflow: ellipsis; /* Truncate text with ellipsis */
+ }
 
+/* Optional: Add styles to make the ellipsis visible */
 div.dropdown-content-table  table:hover {
-    white-space: normal; 
-    max-height: none; 
+  white-space: normal; /* Allow text to wrap on hover */
+  max-height: none; /* Remove the height limit on hover */
 }
 
 @media (max-width: 1288px) {
     div.ep_latest_tool_list {
-        grid-template-columns: repeat(auto-fill,minmax(250px, 1fr)); 
+    grid-template-columns: repeat(auto-fill,minmax(250px, 1fr)); /* Default to 3 columns on larger screens */
     }
     .ep_latest_tool_result_test {
-       width: 250px;/
+       width: 250px;/* Additional styles for smaller screens */
     }
     .ep_link_title a {
-	    font-size: 14px;
-        width: 250px; 
-	    display: -webkit-box;
+	font-size: 14px;
+        width: 250px; /* Adjust maximum width for smaller screens */
+	display: -webkit-box;
         -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
-    }
+     }
+   
     .dropdown-content-table table {
-	    display: block;
-	    font-size: 14px;
-        width: 250px;
+	display: block;
+	font-size: 14px;
+        width: 250px; /* Adjust maximum width for smaller screens */
     }
     .name-header {
         display: block;
@@ -89,62 +100,68 @@ div.dropdown-content-table  table:hover {
 
 @media (max-width: 1067px) {
     div.ep_latest_tool_list {
-        grid-template-columns: repeat(auto-fill,minmax(200px, 1fr)); 
+    grid-template-columns: repeat(auto-fill,minmax(200px, 1fr)); /* Default to 3 columns on larger screens */
     }
+    /* Adjust individual items for even smaller screens if needed */
     .ep_latest_tool_result_test {
-       width: 200px; 
+       width: 200px; /* Additional styles for even smaller screens */
     }
-    .ep_link_title a {
+    
+     .ep_link_title a {
         font-size: 12px;
-        width: 200px; 
+        width: 200px; /* Adjust maximum width for smaller screens */
         display: -webkit-box;
         -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
-    }
-    .dropdown-content-table table {
+     }
+   
+     .dropdown-content-table table {
         display: block;
         font-size: 14px;
-        width: 200px; 
+        width: 200px; /* Adjust maximum width for smaller screens */
     }
+
     .name-header {
         display: block;
         font-size: 12px;
         width: 250px; 
     }     
+
     .full-names table {
         font-size: 12px; 
     }
 }
 
 .expandbtn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    outline: none;
-    text-align: left; 
-}
+            background: none;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            text-align: left; /* Align text to the left to prevent centering of the image */
+        }
 
 #expand-icon {
-    width: 100%; 
-    height: auto; 
-}
+            width: 100%; /* Set the image width to 100% of the button */
+            height: auto; /* Maintain aspect ratio */
+        }
 
 .image-container {
-    display: inline-block; 
-    position: relative; 
-}
+            display: inline-block; /* Ensure the container wraps around the content */
+            position: relative; /* Enable positioning of pseudo-elements */
+            /* Add other styles as needed */
+        }
 
-.image-container::before {
-    content: ""; 
-    position: absolute; 
-    top: 0;
-    left: 0;
-    width: 100%; 
-    height: 100%;
-    background-image: url('{$config.rel_path}/javascript/images/minus.png'); 
-    background-size: cover;
-    background-repeat: no-repeat;
-    opacity: 0.5; 
-    z-index: -1; 
-}
+        .image-container::before {
+            content: ""; /* Create a pseudo-element */
+            position: absolute; /* Position it absolutely within the container */
+            top: 0;
+            left: 0;
+            width: 100%; /* Make it cover the entire container */
+            height: 100%;
+            background-image: url('{$config.rel_path}/javascript/images/minus.png'); /* Replace with your background image path */
+            background-size: cover;
+            background-repeat: no-repeat;
+            opacity: 0.5; /* Adjust the opacity as needed */
+            z-index: -1; /* Place it behind the content */
+        }
 
