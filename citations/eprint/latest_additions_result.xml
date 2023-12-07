@@ -22,7 +22,7 @@
 			</if>
 		</set>
 		<div class="ep_citation_details">
-			<print expr="$item.citation('adeeba')" />
+			<print expr="$item.citation('citation_details')" />
 		</div>
 	</div>
 </citation>
