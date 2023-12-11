@@ -73,11 +73,11 @@ div.dropdown-content-table  table:hover {
     grid-template-columns: repeat(auto-fill,minmax(250px, 1fr)); /* Default to 3 columns on larger screens */
     }
     .ep_latest_tool_result_test {
-       width: 250px;/* Additional styles for smaller screens */
+       width: 100%;/* Additional styles for smaller screens */
     }
     .ep_link_title a {
 	font-size: 14px;
-        width: 250px; /* Adjust maximum width for smaller screens */
+        width: 100%; /* Adjust maximum width for smaller screens */
 	display: -webkit-box;
         -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
@@ -86,12 +86,12 @@ div.dropdown-content-table  table:hover {
     .dropdown-content-table table {
 	display: block;
 	font-size: 14px;
-        width: 250px; /* Adjust maximum width for smaller screens */
+        width: 100%; /* Adjust maximum width for smaller screens */
     }
     .name-header {
         display: block;
         font-size: 14px;
-        width: 250px; 
+        width: 100%; 
     }
     .full-names {
         font-size: 14px; 
@@ -104,12 +104,12 @@ div.dropdown-content-table  table:hover {
     }
     /* Adjust individual items for even smaller screens if needed */
     .ep_latest_tool_result_test {
-       width: 200px; /* Additional styles for even smaller screens */
+       width: 100%; /* Additional styles for even smaller screens */
     }
     
      .ep_link_title a {
         font-size: 12px;
-        width: 200px; /* Adjust maximum width for smaller screens */
+        width: 100%; /* Adjust maximum width for smaller screens */
         display: -webkit-box;
         -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
@@ -118,13 +118,13 @@ div.dropdown-content-table  table:hover {
      .dropdown-content-table table {
         display: block;
         font-size: 14px;
-        width: 200px; /* Adjust maximum width for smaller screens */
+        width: 100%; /* Adjust maximum width for smaller screens */
     }
 
     .name-header {
         display: block;
         font-size: 12px;
-        width: 250px; 
+        width: 100%; 
     }     
 
     .full-names table {
