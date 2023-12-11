@@ -72,7 +72,7 @@ div.dropdown-content-table  table:hover {
     div.ep_latest_tool_list {
     grid-template-columns: repeat(auto-fill,minmax(250px, 1fr)); /* Default to 3 columns on larger screens */
     }
-    .ep_latest_tool_result_test {
+    .ep_latest_tool_result_block {
        width: 100%;/* Additional styles for smaller screens */
     }
     .ep_link_title a {
@@ -103,7 +103,7 @@ div.dropdown-content-table  table:hover {
     grid-template-columns: repeat(auto-fill,minmax(200px, 1fr)); /* Default to 3 columns on larger screens */
     }
     /* Adjust individual items for even smaller screens if needed */
-    .ep_latest_tool_result_test {
+    .ep_latest_tool_result_block {
        width: 100%; /* Additional styles for even smaller screens */
     }
     

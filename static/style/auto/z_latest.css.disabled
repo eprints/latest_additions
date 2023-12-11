@@ -62,7 +62,7 @@ div.dropdown-content-table  table:hover {
     div.ep_latest_tool_list {
         grid-template-columns: repeat(auto-fill,minmax(250px, 1fr)); 
     }
-    .ep_latest_tool_result_test {
+    .ep_latest_tool_result_block {
        width: 250px;/
     }
     .ep_link_title a {
@@ -91,7 +91,7 @@ div.dropdown-content-table  table:hover {
     div.ep_latest_tool_list {
         grid-template-columns: repeat(auto-fill,minmax(200px, 1fr)); 
     }
-    .ep_latest_tool_result_test {
+    .ep_latest_tool_result_block {
        width: 200px; 
     }
     .ep_link_title a {
