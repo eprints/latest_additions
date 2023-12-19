@@ -155,6 +155,7 @@ my $page = $session->make_doc_fragment();
 my $type = $session->get_citation_type( $ds, $citation );
 
 my $title = $session->make_element( "div", class => "fs-4 mt-5" );
+$title->appendChild( $session->html_phrase( "latest_additions:icon" ) );
 $title->appendChild( $session->make_text("Latest Additions to ") );
 $title->appendChild( $session->html_phrase( "archive_name" ) );
 $page->appendChild( $title );
