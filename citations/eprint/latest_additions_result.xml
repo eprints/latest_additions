@@ -1,28 +1,19 @@
 <?xml version="1.0"?>
 <citation xmlns="http://www.w3.org/1999/xhtml" xmlns:cite="http://eprints.org/ep3/citation" xmlns:epc="http://eprints.org/ep3/control">
-	<div class="ep_search_result_block">
-		<set name="docs" expr="$item.documents()">
-			<if test="length($docs) gt 0">
-				<div class="ep_search_result_docs">
-					<foreach expr="$docs" iterator="doc" limit="2">
-						<a href="{$item.uri()}">
-							<img src="{$doc.thumbnail_url('lightbox')}" onerror="displayDefaultImage(this)" />
-						</a>
-					</foreach>
-				</div>
-			</if>
-			<if test="length($docs) gt 2">
-				<div>
-					<a href="{$item.uri()}">
-						+
-						<print expr="length($docs)-2" />
-						<phrase ref="page:more" />
-					</a>
-				</div>
-			</if>
-		</set>
-		<div class="ep_citation_details">
-			<print expr="$item.citation('citation_details')" />
-		</div>
-	</div>
+  <a href="{$item.uri()}">
+    <div class="card">
+      <set name="docs" expr="$item.documents()">
+        <if test="length($docs) gt 0">
+          <foreach expr="$docs" iterator="doc" limit="1">
+            <img src="{$doc.thumbnail_url('lightbox')}" onerror="displayDefaultImage(this)" class="card-img-top" style="height: 250px;object-fit: cover;object-position: top;"/>
+          </foreach>
+        </if>
+        <div class="card-body" style="height: 100px;">
+          <div class="card-text">
+            <print expr="$item.citation('citation_details')"/>
+          </div>
+        </div>
+      </set>
+    </div>
+  </a>
 </citation>

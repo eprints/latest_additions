@@ -186,11 +186,11 @@ if ( defined $feeds_conf )
 my $container;
 if( $type eq "table_row" )
 {
-	$container = $session->make_element( "table", class=>"ep_latest_tool_list" );
+	$container = $session->make_element( "table", class=>"row g-5 py-5 row-cols-1 row-cols-lg-4" );
 }
 else
 {
-	$container = $session->make_element( "div", class=>"ep_latest_tool_list" );
+	$container = $session->make_element( "div", class=>"row g-5 py-5 row-cols-1 row-cols-lg-4" );
 }
 $page->appendChild( $container );
 my $n = 1;
@@ -205,7 +205,7 @@ foreach my $item ( @records )
 	}
 	else
 	{
-		my $div = $session->make_element( "div", class=>"ep_latest_tool_result_block" );
+		my $div = $session->make_element( "div", class=>"col" );
 		$div->appendChild( $row );
 		$container->appendChild( $div );
 	}
