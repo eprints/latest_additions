@@ -24,19 +24,13 @@
             </button>
           </foreach>
         </div>
-        <div class="full-names" style="display:none;position:absolute;">
-          <table>
-            <foreach expr="creators_name" iterator="name">
-              <tr>
-                <td style="text-align: left">
-                  <div>
-                    <print expr="$name{given}"/>
-                    <print expr="$name{family}"/>
-                  </div>
-                </td>
-              </tr>
-            </foreach>
-          </table>
+        <div class="list-group" style="display:none;position:absolute;">
+          <foreach expr="creators_name" iterator="name">
+            <div class="list-group-item">
+              <print expr="$name{given}"/>
+              <print expr="$name{family}"/>
+            </div>
+          </foreach>
         </div>
       </div>
     </div>
