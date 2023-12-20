@@ -9,7 +9,8 @@
 
 $c->{latest_tool_modes} = {
         default => { citation => "latest_additions_result" },
-        fplatest => { citation => "latest_additions_result", max => 8 }
+        fplatest => { citation => "latest_additions_result", max => 4 },
+        fpselected => { citation => "latest_additions_result", max => 4 }
 };
 
 # Example of a latest_tool mode. This makes a mode=articles option
