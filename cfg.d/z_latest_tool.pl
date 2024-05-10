@@ -30,7 +30,7 @@ $c->{latest_tool_feeds} = {
 #       RSS => { enabled => 1, "label" => "RSS 1.0" },
 #       RSS2 => { enabled => 1, "label" => "RSS 2.0" },
 };
-print STDERR "EJO Latest\n";
+
 =head1 COPYRIGHT
 
 =for COPYRIGHT BEGIN
