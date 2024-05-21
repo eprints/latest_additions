@@ -154,11 +154,6 @@ $results->dispose;
 my $page = $session->make_doc_fragment();
 my $type = $session->get_citation_type( $ds, $citation );
 
-my $title = $session->make_element( "div", class => "fs-4 mt-5" );
-$title->appendChild( $session->make_text("Latest Additions to ") );
-$title->appendChild( $session->html_phrase( "archive_name" ) );
-$page->appendChild( $title );
-
 my $feeds_conf = $session->config( "latest_tool_feeds" );
 if ( defined $feeds_conf )
 {
@@ -215,7 +210,7 @@ foreach my $item ( @records )
 		$container->appendChild( $div );
 	}
 }
-my $template = defined $conf->{template} ? $conf->{template} : "default_internal";
+my $template = defined $conf->{template} ? $conf->{template} : "default";
 $session->build_page( $title, $page, "latest_tool", undef, $template );
 $session->send_page();
 
