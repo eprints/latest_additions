@@ -3,11 +3,21 @@
 	<div class="ep_search_result_block">
 		<set name="docs" expr="$item.documents()">
 			<if test="length($docs) gt 0">
-				<div class="ep_search_result_docs">
+				<div class="ep_citation_tile_result_docs">
 					<foreach expr="$docs" iterator="doc" limit="2">
+						<if test="$doc.is_public()"> 
 						<a href="{$item.uri()}">
-							<img src="{$doc.thumbnail_url('lightbox')}" onerror="displayDefaultImage(this)" />
+							<img src="{$doc.thumbnail_url('lightbox')}"/>
+							<div class="ep_citation_tile_result_docs ep_public_doc">
+                                                	</div>
 						</a>
+ 						</if>
+						<if test="!$doc.is_public()">
+						<a href="{$item.uri()}">
+							<img src=""/>
+							<div class="ep_citation_tile_result_docs ep_restricted_doc"></div>
+						</a>
+						</if> 
 					</foreach>
 				</div>
 			</if>
@@ -20,6 +30,10 @@
 					</a>
 				</div>
 			</if>
+			<if test="length($docs) lt 1">
+                                <div class="ep_citation_tile_result_docs ep_citation_tile_result_metadata_only">
+                                </div>
+                        </if>
 		</set>
 		<div class="ep_citation_details">
 			<print expr="$item.citation('citation_details')" />

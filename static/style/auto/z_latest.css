@@ -19,11 +19,12 @@ div.ep_latest_tool_list {
 }
 
 .ep_citation_details {
-	width: 300px;
+	width: 100%;
         height: 80px;
         overflow: initial; 
         white-space: normal; /* Prevent text from wrapping */
-        text-overflow: ellipsis; 
+        text-overflow: ellipsis;
+        position: relative; 
 }
 
 .truncated::after {
@@ -33,7 +34,7 @@ div.ep_latest_tool_list {
 
 div.ep_link_title a {
       text-decoration: none;
-      color: #666666; /* Change to your preferred color */
+      color: #666666; 
       font-family: "Helvetica", sans-serif;
       overflow: hidden;
       text-overflow: ellipsis; /* Truncate text with ellipsis */
@@ -42,18 +43,29 @@ div.ep_link_title a {
       -webkit-box-orient: vertical;
  }
 
+div.ep_link_authorname a {
+      text-decoration: none;
+      color: #8C0013;
+}
+
 div.dropdown-content {
       display: block;
-      position: relative;
+      position: absolute;
       z-index: 2;
+      top: 40%;
 }
 
 .full-names {
-background-color: white;
-padding-left: 5px;
-border: 1px solid rgba(204, 204, 204, 0.8);
-margin-top: -4px;
-width: fit-content; }
+ background-color: white;
+ border: 1px solid rgba(204, 204, 204, 0.8);
+ margin-top: 2px;
+ width: fit-content; 
+ padding-left: 10px;
+ padding-right: 60px;
+ padding-top: 8px;
+ padding-bottom: 8px;
+ box-shadow: 2px 2px 2px 2px #eeeeee;
+}
 
 div.dropdown-content-table table{
       color: #333333; /* Change to your preferred color */
@@ -165,3 +177,30 @@ div.dropdown-content-table  table:hover {
             z-index: -1; /* Place it behind the content */
         }
 
+.ep_citation_tile_result_docs.ep_restricted_doc {
+    background-image: url('/style/images/restricted2.png');
+    background-size: 80%;
+    background-position: 25px -30px;
+    opacity: 0.5;
+    border: none;
+}
+
+..ep_citation_tile_result_docs.ep_citation_tile_result_metadata_only {
+    background-image: url('/style/images/metadata-only.png');
+    background-size: 80%;
+    background-position: 25px -30px;
+    margin-top: 15px;
+    opacity: 0.5;
+    border: none;
+}
+.ep_citation_tile_result_docs.ep_public_doc {
+    background-image: url('/style/images/default_image.png');
+    background-size: 80%;
+    background-position: 25px -30px;
+    border: none; 
+    opacity: 0.5;
+}
+.ep_citation_tile_result_link {
+    display: block;
+    text-decoration: none;
+}
