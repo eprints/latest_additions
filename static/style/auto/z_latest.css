@@ -170,7 +170,7 @@ div.dropdown-content-table  table:hover {
             left: 0;
             width: 100%; /* Make it cover the entire container */
             height: 100%;
-            background-image: url('{$config.rel_path}/javascript/images/minus.png'); /* Replace with your background image path */
+            background-image: url('{$config.rel_path}/style/images/minus.svg'); /* Replace with your background image path */
             background-size: cover;
             background-repeat: no-repeat;
             opacity: 0.5; /* Adjust the opacity as needed */
