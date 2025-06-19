@@ -3,10 +3,10 @@
     var expandIcon =  button.querySelector('img');
     if (fullNames.style.display === 'none'){
       fullNames.style.display = 'block';
-      expandIcon.src = '/javascript/images/minus.png';
+      expandIcon.src = '/style/images/minus.svg';
     } else {
       fullNames.style.display = 'none';
-      expandIcon.src = '/javascript/images/plus.png';
+      expandIcon.src = '/style/images/plus.svg';
     }
   }
 

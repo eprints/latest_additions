@@ -16,7 +16,7 @@
                                                <!-- <print expr="$name{given}" />
                                                 <print expr="$name{family}" /> -->
                                                 <button class="expandbtn" onclick="expandNames(this)">
-                                                        <img id="expand-icon" src="{$config{rel_path}}/style/images/plus.png" />
+                                                        <img id="expand-icon" src="{$config{rel_path}}/style/images/plus.svg" />
                                                 </button>
                                                 </epc:if>
                                         </div>
