@@ -5,18 +5,20 @@
 			<if test="length($docs) gt 0">
 				<div class="ep_citation_tile_result_docs">
 					<foreach expr="$docs" iterator="doc" limit="1">
-						<if test="$doc.is_public()"> 
-						<a href="{$item.uri()}">
-							<img src="{$doc.thumbnail_url('lightbox')}"/>
-							<div class="ep_citation_tile_result_docs ep_public_doc"></div>
-						</a>
- 						</if>
+						<if test="$doc.is_public()">
+							<a href="{$item.uri()}">
+								<div class="ep_citation_tile_result_docs ep_public_doc">
+									<if test="is_set($doc.thumbnail_url('lightbox'))">
+										<img src="{$doc.thumbnail_url('lightbox')}" />
+									</if>
+								</div>
+							</a>
+						</if>
 						<if test="!$doc.is_public()">
-						<a href="{$item.uri()}">
-							<img src=""/>
-							<div class="ep_citation_tile_result_docs ep_restricted_doc"></div>
-						</a>
-						</if> 
+							<a href="{$item.uri()}">
+								<div class="ep_citation_tile_result_docs ep_restricted_doc" />
+							</a>
+						</if>
 					</foreach>
 				</div>
 			</if>
@@ -30,7 +32,7 @@
 				</div>
 			</if>
 			<if test="length($docs) lt 1">
-				<div class="ep_citation_tile_result_docs ep_citation_tile_result_metadata_only"></div>
+				<div class="ep_citation_tile_result_docs ep_citation_tile_result_metadata_only" />
 			</if>
 		</set>
 		<div class="ep_citation_details">
