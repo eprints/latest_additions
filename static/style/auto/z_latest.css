@@ -196,11 +196,8 @@ div.dropdown-content-table  table:hover {
     background-image: url('/style/images/default_image.png');
     background-size: 80%;
     background-position: 25px;
+    opacity: 0.5;
     border: none;
-    position: relative;
-    /* Set just the background opacity */
-    background-color: rgba(255, 255, 255, 0.5);
-    background-blend-mode: lighten;
 }
 .ep_citation_tile_result_link {
     display: block;

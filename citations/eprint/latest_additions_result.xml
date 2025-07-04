@@ -7,11 +7,12 @@
 					<foreach expr="$docs" iterator="doc" limit="1">
 						<if test="$doc.is_public()">
 							<a href="{$item.uri()}">
-								<div class="ep_citation_tile_result_docs ep_public_doc">
-									<if test="is_set($doc.thumbnail_url('lightbox'))">
-										<img src="{$doc.thumbnail_url('lightbox')}" />
-									</if>
-								</div>
+								<if test="is_set($doc.thumbnail_url('lightbox'))">
+									<img src="{$doc.thumbnail_url('lightbox')}" />
+								</if>
+								<if test="!is_set($doc.thumbnail_url('lightbox'))">
+									<div class="ep_citation_tile_result_docs ep_public_doc" />
+								</if>
 							</a>
 						</if>
 						<if test="!$doc.is_public()">
