@@ -2,16 +2,17 @@
 <citation xmlns="http://www.w3.org/1999/xhtml" xmlns:cite="http://eprints.org/ep3/citation" xmlns:epc="http://eprints.org/ep3/control">
 	<div class="ep_search_result_block">
 		<set name="docs" expr="$item.documents()">
-			<if test="length($docs) gt 0">
-				<div class="ep_citation_tile_result_docs">
+			<div class="ep_citation_tile_result_docs">
+				<if test="length($docs) gt 0">
 					<foreach expr="$docs" iterator="doc" limit="1">
 						<if test="$doc.is_public()">
 							<a href="{$item.uri()}">
-								<div class="ep_citation_tile_result_docs ep_public_doc">
-									<if test="is_set($doc.thumbnail_url('lightbox'))">
-										<img src="{$doc.thumbnail_url('lightbox')}" />
-									</if>
-								</div>
+								<if test="is_set($doc.thumbnail_url('lightbox'))">
+									<img src="{$doc.thumbnail_url('lightbox')}" />
+								</if>
+								<if test="!is_set($doc.thumbnail_url('lightbox'))">
+									<div class="ep_citation_tile_result_docs ep_public_doc" />
+								</if>
 							</a>
 						</if>
 						<if test="!$doc.is_public()">
@@ -20,8 +21,11 @@
 							</a>
 						</if>
 					</foreach>
-				</div>
-			</if>
+				</if>
+				<if test="length($docs) lt 1">
+					<div class="ep_citation_tile_result_docs ep_citation_tile_result_metadata_only" />
+				</if>
+			</div>
 			<if test="length($docs) gt 1">
 				<div>
 					<a href="{$item.uri()}">
@@ -30,9 +34,6 @@
 						<phrase ref="page:more" />
 					</a>
 				</div>
-			</if>
-			<if test="length($docs) lt 1">
-				<div class="ep_citation_tile_result_docs ep_citation_tile_result_metadata_only" />
 			</if>
 		</set>
 		<div class="ep_citation_details">
