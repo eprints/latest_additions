@@ -93,9 +93,23 @@ margin-bottom: 5px;
 
 .ep_citation_tile_result_docs img 
 {
-        width:100%;
-        height:100%;
-        object-fit: contain; 
+        max-width: 100%;
+        max-height: 100%;
+        display: block;
+        margin: auto;
+        transition: max-height 1s;
+}
+
+@media (min-width: 1276px) {
+    .ep_citation_tile_result_docs:hover img {
+        max-height: 230%;
+    }
+}
+
+@media (min-width: 1067px) {
+    .ep_citation_tile_result_docs:hover img {
+        max-height: 310%;
+    }
 }
 
 @media (max-width: 1276px) {
@@ -105,10 +119,6 @@ margin-bottom: 5px;
         overflow: hidden;
         border: 1px solid grey;
         }
-
-    .ep_citation_tile_result_docs img {
-        object-fit: cover; /* Allow images to exceed their natural size if needed */
-    }
 }
 
 @media (max-width: 1067px) {
@@ -121,6 +131,7 @@ margin-bottom: 5px;
         }
 
     .ep_citation_tile_result_docs img {
+        max-height: none;
         object-fit: cover;
     }
 }
@@ -134,10 +145,6 @@ margin-bottom: 5px;
         overflow: hidden;
         border: 1px solid grey;
         }
-
-    .ep_citation_tile_result_docs img {
-        object-fit: cover;
-    }
 }
 
 .ep_search_result > div
