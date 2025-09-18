@@ -48,13 +48,6 @@ div.ep_link_authorname a {
       color: #8C0013;
 }
 
-div.dropdown-content {
-      display: block;
-      position: absolute;
-      z-index: 2;
-      top: 40%;
-}
-
 .full-names {
  background-color: white;
  border: 1px solid rgba(204, 204, 204, 0.8);

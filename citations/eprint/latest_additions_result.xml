@@ -36,8 +36,6 @@
 				</div>
 			</if>
 		</set>
-		<div class="ep_citation_details">
-			<print expr="$item.citation('citation_details')" />
-		</div>
+		<print expr="$item.citation('citation_details')" />
 	</div>
 </citation>
