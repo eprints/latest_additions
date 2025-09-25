@@ -101,13 +101,13 @@ margin-bottom: 5px;
 }
 
 @media (min-width: 1276px) {
-    .ep_citation_tile_result_docs:hover img {
+    .ep_citation_tile_result_docs.ep_citation_tile_zoom:hover img {
         max-height: 230%;
     }
 }
 
 @media (min-width: 1067px) {
-    .ep_citation_tile_result_docs:hover img {
+    .ep_citation_tile_result_docs.ep_citation_tile_zoom:hover img {
         max-height: 310%;
     }
 }

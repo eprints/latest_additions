@@ -2,7 +2,7 @@
 <citation xmlns="http://www.w3.org/1999/xhtml" xmlns:cite="http://eprints.org/ep3/citation" xmlns:epc="http://eprints.org/ep3/control">
 	<div class="ep_search_result_block">
 		<set name="docs" expr="$item.documents()">
-			<div class="ep_citation_tile_result_docs">
+			<div class="ep_citation_tile_result_docs {$tile_class}">
 				<if test="length($docs) gt 0">
 					<foreach expr="$docs" iterator="doc" limit="1">
 						<if test="$doc.is_public()">
