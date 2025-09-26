@@ -30,6 +30,8 @@ $c->{latest_tool_feeds} = {
         RSS2 => { enabled => 1, "label" => "RSS 2.0" },
 };
 
+$c->{latest_tool_tile_zoom} = 1;
+
 =head1 COPYRIGHT
 
 =for COPYRIGHT BEGIN
