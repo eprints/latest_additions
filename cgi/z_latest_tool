@@ -196,9 +196,16 @@ $page->appendChild( $container );
 my $n = 1;
 foreach my $item ( @records )
 {
+	# If 'latest_tool_tile_zoom' has been enabled (on by default) then we have
+	# to add the 'ep_citation_tile_zoom' class so that the CSS enables
+	my $zoom = $session->config( 'latest_tool_tile_zoom' );
+	my $tile_class = $zoom ? 'ep_citation_tile_zoom' : '';
+
 	my $row = $item->render_citation_link( 
 		$citation,
-		n => [$n++, "INTEGER"] );
+		n => [$n++, "INTEGER"],
+		tile_class => [$tile_class, 'STRING'],
+	);
 	if( $type eq "table_row" )
 	{
 		$container->appendChild( $row );
