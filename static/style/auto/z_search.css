@@ -100,13 +100,13 @@ margin-bottom: 5px;
         transition: max-height 1s;
 }
 
-@media (min-width: 1276px) {
+@media (min-width: 1276px) and (prefers-reduced-motion: no-preference) {
     .ep_citation_tile_result_docs.ep_citation_tile_zoom:hover img {
         max-height: 230%;
     }
 }
 
-@media (min-width: 1067px) {
+@media (min-width: 1067px) and (prefers-reduced-motion: no-preference) {
     .ep_citation_tile_result_docs.ep_citation_tile_zoom:hover img {
         max-height: 310%;
     }
