@@ -42,12 +42,9 @@ sub run_authorname_with_link
         my @browse_links;
         foreach my $i (0..$#$creators)
         {
-                my $creator = @$creators[$i];
-                if( $i > 0 )
-                {
-                         $r->appendChild( $session->make_element( "br" ) );
-                }
+               my $creator = @$creators[$i];
                my $email = $creator->{id};
+	       my $list_item;
                my $person_span;
                my $name_bold;
                my @creators_name = ( $creator->{name}->{family}, $creator->{name}->{given},  $creator->{name}->{lineage},  $creator->{name}->{honourific} );
@@ -58,8 +55,9 @@ sub run_authorname_with_link
 
                $person_span = $session->make_element( "span", "class" => "person" );
                $person_span->appendChild( $browse_link );
-
-                $r->appendChild( $person_span );
+               $list_item = $session->make_element( "li" );
+               $list_item->appendChild( $person_span );
+               $r->appendChild( $list_item );
         }
         return [ $r, "XHTML" ];
 }
