@@ -66,6 +66,10 @@ div.full-names{
  box-shadow: 2px 2px 2px 2px #eeeeee;
 }
 
+ul.full-names-list {
+	margin: 0;
+}
+
 div.dropdown-content-table table{
       color: #333333; /* Change to your preferred color */
  display: block; 

@@ -6,9 +6,9 @@
 				<if test="length($docs) gt 0">
 					<foreach expr="$docs" iterator="doc" limit="1">
 						<if test="$doc.is_public()">
-							<a href="{$item.uri()}">
+							<a href="{$item.uri()}#pdf-viewer-wrapper">
 								<if test="is_set($doc.thumbnail_url('lightbox'))">
-									<img src="{$doc.thumbnail_url('lightbox')}" />
+									<img src="{$doc.thumbnail_url('lightbox')}" alt="{phrase('latest_additions:preview_image_prefix')} {$doc.property('main')}"/>
 								</if>
 								<if test="!is_set($doc.thumbnail_url('lightbox'))">
 									<div class="ep_citation_tile_result_docs ep_public_doc" />
@@ -28,7 +28,7 @@
 			</div>
 			<if test="length($docs) gt 1">
 				<div>
-					<a href="{$item.uri()}">
+					<a href="{$item.uri()}#docs_text">
 						+
 						<print expr="length($docs)-1" />
 						<phrase ref="page:more" />

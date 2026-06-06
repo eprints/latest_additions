@@ -16,27 +16,16 @@
                                                <!-- <print expr="$name{given}" />
                                                 <print expr="$name{family}" /> -->
                                                 <button class="expandbtn" onclick="expandNames(this)">
-                                                        <img id="expand-icon" src="{$config{rel_path}}/style/images/plus.svg" />
+							<img id="expand-icon" src="{$config{rel_path}}/style/images/plus.svg" alt="{phrase('latest_additions:expand_names')}" />
                                                 </button>
                                                 </epc:if>
                                         </div>
                                         
                                 </div>
                                 <div class="full-names" style="display:none;">
-                                        <table>
-                                               	
-                                                        <tr>
-                                                            	<td style="text-align: left">
-                                                                        <div class="ep_link_authorname">
-                                                                               <!-- <a href="{$config{rel_path}}/view/creators/"> <epc:print expr="$name{given}" /> <epc:print expr="$name{family}" /></a> -->
-                                                                                 <print expr="authorname_with_link(creators)" />
-                                                                                <!--<print expr="$name{given}" />
-                                                                                <print expr="$name{family}" />-->
-                                                                        </div>
-                                                                </td>
-                                                        </tr>
-                                                
-                                        </table>
+					<ul class="full-names-list">
+                                        	<print expr="authorname_with_link(creators)" />
+                                        </ul>
                                 </div>
                         </div>
                 </div>
